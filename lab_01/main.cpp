@@ -1,10 +1,11 @@
 #include "array_ops.h"
 
 #include <iostream>
+#include <limits>
 
 void clear_input() {
     std::cin.clear();
-    std::cin.ignore(10000, '\n');
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 bool read_int(const char* message, int& value) {

@@ -12,21 +12,23 @@
 
 ## Сборка
 
+Команды выполняются из корня репозитория:
+
 ```bash
-cmake -S . -B build
-cmake --build build
+cmake -S lab_01 -B lab_01/build
+cmake --build lab_01/build
 ```
 
 ## Запуск программы
 
 ```bash
-./build/lab01_main
+./lab_01/build/lab01_main
 ```
 
 ## Запуск тестов
 
 ```bash
-ctest --test-dir build --output-on-failure
+ctest --test-dir lab_01/build --output-on-failure
 ```
 
 Проект использует C++20, CMake и GoogleTest.
