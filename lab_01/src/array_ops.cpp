@@ -21,8 +21,8 @@ int* array_resize(int* arr, std::size_t size, std::size_t new_size) {
     }
 
     if (new_size == 0) {
-        delete[] arr;
-        return nullptr;
+        array_delete(arr);
+        return arr;
     }
 
     int* new_arr = new int[new_size]{};
@@ -119,6 +119,7 @@ void array_counting_sort(int* arr, std::size_t size) {
 
     for (std::size_t i = 0; i < size; ++i) {
         if (arr[i] < 0 || arr[i] > 1023) {
+            std::cout << "Число" << arr[i] << "вне диапазона [0, 1023]" << '\n';
             return;
         }
     }
